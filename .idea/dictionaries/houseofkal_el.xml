@@ -2,6 +2,8 @@
   <dictionary name="houseofkal-el">
     <words>
       <w>bcrypt</w>
+      <w>createlink</w>
+      <w>postlink</w>
       <w>sequelize</w>
     </words>
   </dictionary>

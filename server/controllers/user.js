@@ -33,7 +33,7 @@ module.exports = {
                 //console.log(`hashed input: ${input}, stored password: ${user.password}`);
                 if (input === user.password) {
                     //console.log('hello from line 35');
-                    let token = jwt.encode({id: user.id, name: user.name}, appSecrets.SecretCode);
+                    let token = jwt.encode({id: user.id, email: user.email}, appSecrets.SecretCode);
                     //console.log(token, 'my token');
                     //console.log('appsecrets',appSecrets.jwtSecret);
                     let json = {
