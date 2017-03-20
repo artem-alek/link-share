@@ -1,14 +1,14 @@
-### Link Share API Documentation
+# Link Share API Documentation
 
-## Routes:
+## To register a new user:
 
-```/users``` To register a new user.
+```/users```
   Required params:
     * name
     * email
     * password
 
-# Example
+### Example
 ```
 {
   "id": 5,
@@ -22,7 +22,7 @@
     * email
     * password
 
-# Example
+### Example
 ```
 {
   "user": 5,
