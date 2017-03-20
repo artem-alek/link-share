@@ -14,7 +14,7 @@
   "name": "Superman",
   "email": "superman@gmail.com"
 }
-
+```
 
 ```/login``` To receive token for user.
   Required params:
