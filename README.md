@@ -1,14 +1,14 @@
 # Link Share API Documentation
 
-## To register a new user:
+### To register a new user:
 
 ```/users```
   Required params:
-    * name
-    * email
-    * password
+  * name
+  * email
+  * password
 
-### Example
+#### Example
 ```
 {
   "id": 5,
@@ -16,13 +16,13 @@
   "email": "superman@gmail.com"
 }
 ```
-
+### To receive access token of a user.
 ```/login``` To receive token for user.
   Required params:
-    * email
-    * password
+  * email
+  * password
 
-### Example
+#### Example
 ```
 {
   "user": 5,
