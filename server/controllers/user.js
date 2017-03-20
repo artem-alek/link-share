@@ -37,7 +37,7 @@ module.exports = {
                     //console.log(token, 'my token');
                     //console.log('appsecrets',appSecrets.jwtSecret);
                     let json = {
-                        user: user,
+                        user: user.id,
                         token: token
                     };
                     return res.status(200).send(json);
@@ -45,6 +45,15 @@ module.exports = {
                     return res.status(401).send({message: "No such email or wrong password."});
                 }
             })
+            .catch(error => res.status(400).send(error));
+    },
+
+    getUsers(req,res){
+        User.findAll({
+            attributes: ['id', 'name', 'email']
+        })
+
+            .then(users => res.status(200).send(users))
             .catch(error => res.status(400).send(error));
     }
 };

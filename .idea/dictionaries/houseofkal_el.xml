@@ -3,6 +3,7 @@
     <words>
       <w>bcrypt</w>
       <w>createlink</w>
+      <w>linkid</w>
       <w>postlink</w>
       <w>sequelize</w>
     </words>

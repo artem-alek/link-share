@@ -1,5 +1,4 @@
 const Link = require('../models').Links;
-const jwt = require("jwt-simple");
 
 module.exports = {
     createPost(req, res) {
