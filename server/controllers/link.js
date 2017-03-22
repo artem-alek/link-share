@@ -10,5 +10,11 @@ module.exports = {
         })
             .then(post => res.status(201).send(post))
             .catch(error => res.status(400).send(error));
+    },
+
+    getLinks(req, res) {
+      Link.findAll()
+      .then(post => res.status(201).send(post))
+      .catch(error => res.status(400).send(error));
     }
 }

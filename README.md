@@ -92,7 +92,53 @@ Required Params:
 }
 ```
 
+### Get all links.
+```
+/links
+```
+Required Params:
+* none
+
+#### Example
+```
+[
+  {
+    "id": 1,
+    "title": "This is a new post!",
+    "body": "a start of a new blog post. I am excited about everything...",
+    "users_id": null,
+    "createdAt": "2017-03-12T23:20:20.473Z",
+    "updatedAt": "2017-03-12T23:20:20.473Z"
+  },
+  {
+    "id": 2,
+    "title": "This is a 2 new post!",
+    "body": "a start of a new blog post. I am excited about everything...",
+    "users_id": 4,
+    "createdAt": "2017-03-12T23:34:45.322Z",
+    "updatedAt": "2017-03-12T23:34:45.322Z"
+  },
+  {
+    "id": 3,
+    "title": "This is a 3 new post!",
+    "body": "a start of a new blog post. I am excited about everything...",
+    "users_id": 4,
+    "createdAt": "2017-03-12T23:35:01.002Z",
+    "updatedAt": "2017-03-12T23:35:01.002Z"
+  },
+  {
+    "id": 4,
+    "title": "I love this linkshare app!",
+    "body": "text area that can fit up to 650 characters.",
+    "users_id": 5,
+    "createdAt": "2017-03-20T19:07:40.830Z",
+    "updatedAt": "2017-03-20T19:07:40.830Z"
+  }
+]
+```
+
 ### To create a comment on a link.
+
 ```
 POST /comment/:linkid
 ```
@@ -108,5 +154,57 @@ Required Params:
   "users_id": 5,
   "updatedAt": "2017-03-20T19:09:42.574Z",
   "createdAt": "2017-03-20T19:09:42.574Z"
+}
+```
+
+### Get all comments.
+
+```
+/comments
+```
+
+Required Params:
+* none
+
+#### Example
+```
+[
+  {
+    "id": 1,
+    "comment": "This is a first comment that is linked to a post.",
+    "users_id": 4,
+    "link_id": 4,
+    "createdAt": "2017-03-13T01:37:29.378Z",
+    "updatedAt": "2017-03-13T01:37:29.378Z"
+  },
+  {
+    "id": 2,
+    "comment": "Ya, i also like this app!",
+    "users_id": 5,
+    "link_id": 4,
+    "createdAt": "2017-03-20T19:09:42.574Z",
+    "updatedAt": "2017-03-20T19:09:42.574Z"
+  }
+]
+```
+
+### Get a comment.
+
+```
+/comment/:commentid
+```
+
+Required Params:
+* comment id
+
+#### Example
+```
+{
+  "id": 1,
+  "comment": "This is a first comment that is linked to a post.",
+  "users_id": 4,
+  "link_id": 4,
+  "createdAt": "2017-03-13T01:37:29.378Z",
+  "updatedAt": "2017-03-13T01:37:29.378Z"
 }
 ```

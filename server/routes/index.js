@@ -11,6 +11,9 @@ module.exports = (app) => {
     app.get('/users', UserController.getUsers);
 
     app.post('/createlink', middleware.authenticate, LinkController.createPost);
+    app.get('/links', LinkController.getLinks);
 
-    app.post('/comment/:linkid', middleware.authenticate, CommentController.createComment)
+    app.post('/comment/:linkid', middleware.authenticate, CommentController.createComment);
+    app.get('/comment/:commentid', CommentController.getComment);
+    app.get('/comments', CommentController.getComments);
 };
